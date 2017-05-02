@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common CM stuff.
+# Inherit some common stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 $(call inherit-product, device/motorola/athene/full_athene.mk)
