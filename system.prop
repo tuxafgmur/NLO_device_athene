@@ -1,7 +1,6 @@
 #
 # Device properties
 #
-
 DEVICE_PROVISIONED=1
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
@@ -29,14 +28,11 @@ camera.lowpower.record.enable=1
 dalvik.vm.boot-dex2oat-threads=4
 dalvik.vm.dex2oat-threads=2
 dalvik.vm.image-dex2oat-threads=4
-dalvik.vm.isa.arm.features=default
-dalvik.vm.isa.arm.variant=cortex-a53
 debug.enable.sglscale=0
 debug.mdpcomp.logs=0
 debug.sf.hw=1
 dev.pm.dyn_samplingrate=1
 drm.service.enabled=true
-keyguard.no_require_sim=true
 mdc_initial_max_retry=10
 media.aac_51_output_enabled=true
 media.camera.ts.monotonic=1
@@ -156,7 +152,6 @@ ro.com.google.clientidbase.am=android-motorola
 ro.com.google.clientidbase.gmm=android-motorola
 ro.com.google.clientidbase.ms=android-motorola
 ro.com.google.clientidbase.yt=android-motorola
-ro.com.google.clientidbase=android-motorola
 ro.config.vc_call_vol_steps=8
 ro.core_ctl_max_cpu=4
 ro.core_ctl_min_cpu=2
