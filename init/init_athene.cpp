@@ -111,20 +111,12 @@ static void target_ram(void) {
     std::string ram;
 
     ram = property_get("ro.boot.ram");
-
-    if (ram == "2GB") {
-        property_set("dalvik.vm.heapstartsize", "16m");
-        property_set("dalvik.vm.heapsize", "512m");
-        property_set("dalvik.vm.heapminfree", "2m");
-        property_set("ro.hwui.text_large_cache_height", "1024");
-    } else {
-        property_set("dalvik.vm.heapstartsize", "8m");
-        property_set("dalvik.vm.heapsize", "384m");
-        property_set("dalvik.vm.heapminfree", "512k");
-        property_set("ro.hwui.text_large_cache_height", "2048");
-    }
+    
     property_set("dalvik.vm.heapgrowthlimit", "192m");
     property_set("dalvik.vm.heapmaxfree", "8m");
+    property_set("dalvik.vm.heapminfree", "512k");
+    property_set("dalvik.vm.heapsize", "384m");
+    property_set("dalvik.vm.heapstartsize", "8m");
     property_set("dalvik.vm.heaptargetutilization", "0.75");
     property_set("ro.hwui.drop_shadow_cache_size", "6");
     property_set("ro.hwui.gradient_cache_size", "1");
@@ -132,6 +124,11 @@ static void target_ram(void) {
     property_set("ro.hwui.path_cache_size", "32");
     property_set("ro.hwui.r_buffer_cache_size", "8");
     property_set("ro.hwui.text_large_cache_width", "2048");
+    if (ram == "2GB") {
+        property_set("ro.hwui.text_large_cache_height", "1024");
+    } else {
+        property_set("ro.hwui.text_large_cache_height", "2048");
+    }
     property_set("ro.hwui.text_small_cache_height", "1024");
     property_set("ro.hwui.text_small_cache_width", "1024");
     property_set("ro.hwui.texture_cache_flushrate", "0.4");
