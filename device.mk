@@ -118,8 +118,9 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
-# Fm
+# Fm radio
 PRODUCT_PACKAGES += \
+    FMRadio \
     libfmjni
 
 # Gps
