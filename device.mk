@@ -91,6 +91,7 @@ PRODUCT_COPY_FILES +=  \
 
 # Camera
 PRODUCT_PACKAGES += \
+    camera.msm8952 \
     libbson
 
 PRODUCT_COPY_FILES += \
