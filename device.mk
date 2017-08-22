@@ -162,6 +162,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vhw.xml:system/etc/vhw.xml
 
+# Fonts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fonts/Newfont_Light.ttf:system/fonts/Newfont_Light.ttf\
+    $(LOCAL_PATH)/fonts/Newfont_Regular.ttf:system/fonts/Newfont_Regular.ttf
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
