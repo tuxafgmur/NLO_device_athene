@@ -1,6 +1,8 @@
 #!/bin/bash
 # Copyright (C) 2016 - 2017 Tuxafgmur - Dhollmen 
 # Removes unwanted files from the rom, before packaged it
+# Parameters:
+#   1 = $(TARGET_OUT)
 
 WSYSTEMDIR=$1
 
@@ -8,8 +10,7 @@ WINTERMED=${WSYSTEMDIR%/*}
 
 rm -f  $WINTERMED/*.md5sum
 rm -f  $WSYSTEMDIR/xbin/ps
-
-[ -e $WSYSTEMDIR/xbin/fstrim ] || ln -s busybox $WSYSTEMDIR/xbin/fstrim
+rm -f  $WSYSTEMDIR/etc/recovery-resource.dat
 
 FirstSortLine=`grep -n 'Additional Build Properties' $WSYSTEMDIR/build.prop | cut -d: -f1`
 LastSortLine=`wc -l $WSYSTEMDIR/build.prop | cut -d ' ' -f1`
